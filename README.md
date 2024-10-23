@@ -8,6 +8,7 @@ pinned: false
 license: apache-2.0
 short_description: llm benchmarks
 ---
+```
 TESTS:
    KNOWLEDGE:
       TQA - Truthful QA
@@ -54,6 +55,7 @@ TESTS:
                  To score a correct answer in MC both queries must answer correctly.
                  Winogrande using logprob completion (evaluates the probability of a common completion for the two possible cases).
                  Tests are run using a modified llama.cpp server (supporting logprob completion mode) and/or textsynth server where noted.
+```
 
 TEST       |  MODELA   |  MODELB 
 -----------|-----------|--------
