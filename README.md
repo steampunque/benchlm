@@ -14,7 +14,7 @@ category and discipline summaries.
 Tests are run using a modified llama.cpp server (supporting logprob completion mode) and/or textsynth server where noted.
 
 METHODOLOGY:
-   All CoT and code tests are zero shot.
+   All CoT, code, and math tests are zero shot.  A few BBH tests use fewshot examples.
    Math CoT test such as GSM8K, APPLE, MATH etc. are self graded against correct answer using LLM under test
      If self grade does not work reliably (such as with very small model) the result is zeroed to mark invalid test.
    All MC tests do two queries, 1 with answers in test order and 2nd with answers circularly shifted 1.
