@@ -7,9 +7,8 @@ pinned: false
 license: apache-2.0
 short_description: llm benchmarks
 ---
-```
 HF spaces no longer renders the page.  To see results page go to https://github.com/steampunque/benchlm
-
+```
 Independent LLM benchmarks for a wide range of models using custom prompts including
 category and discipline summaries.
 
