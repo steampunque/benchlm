@@ -8,6 +8,7 @@ license: apache-2.0
 short_description: llm benchmarks
 ---
 To see results on github go to https://github.com/steampunque/benchlm
+
 To see results on hf go to https://huggingface.co/spaces/steampunque/benchlm
 ```
 Independent LLM benchmarks for a wide range of open weight models using custom prompts
@@ -678,12 +679,12 @@ AUDIO MODELS:
 **TEST** |  **acc** |  **acc** |  **acc** | 
  BBA_formal_fallacies                        | 0.488           | 0.468                      | 0.460                      |
  BBA_navigate                                | 0.628           | 0.420                      | 0.436                      |
- BBA_object_counting                         | 0.616           | 0                          | 0.856                      |
+ BBA_object_counting                         | 0.616           | 0.576                      | 0.856                      |
  BBA_web_of_lies                             | 0.508           | 0.488                      | 0.496                      |
- BBA                                         | 0.560           | 0.344                      | 0.562                      |
+ BBA                                         | 0.560           | 0.488                      | 0.562                      |
  DISCIPLINES
  NLP                                         | 0.498           | 0.478                      | 0.478                      |
- MATH                                        | 0.622           | 0.210                      | 0.646                      |
+ MATH                                        | 0.622           | 0.498                      | 0.646                      |
  SCIENCE                                     |  -              |  -                         |  -                         |
  ENGINEERING                                 |  -              |  -                         |  -                         |
  MEDICINE                                    |  -              |  -                         |  -                         |
@@ -692,4 +693,4 @@ AUDIO MODELS:
  LAW                                         |  -              |  -                         |  -                         |
  AUDIO                                       |  -              |  -                         |  -                         |
  COMPOSITE AVERAGE
- AVG                                         | 0.560           | 0.344                      | 0.562                      |
+ AVG                                         | 0.560           | 0.488                      | 0.562                      |
