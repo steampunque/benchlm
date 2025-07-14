@@ -670,26 +670,26 @@ VISION MODELS:
 
 AUDIO MODELS:
 
- MODEL					| Qwen2.5-Omni-7B | ultravox-v0_5-llama-3_2-1b | ultravox-v0_5-llama-3_1-8b |
----------------------------------------------|-----------------|----------------------------|----------------------------|
- params					| 7.62B           | 1.24B                      | 8.03B                      |
- quant					| Q6_K_H          | Q8_0_H                     | Q6_K_H                     |
- engine					| llama.cpp version: 5780 | llama.cpp version: 5819    | llama.cpp version: 5780    |
-**TEST** |  **acc** |  **acc** |  **acc** | 
- BBA_formal_fallacies                        | 0.488           | 0.468                      | 0.460                      |
- BBA_navigate                                | 0.628           | 0.420                      | 0.436                      |
- BBA_object_counting                         | 0.616           | 0.576                      | 0.856                      |
- BBA_web_of_lies                             | 0.508           | 0.488                      | 0.496                      |
- BBA                                         | 0.560           | 0.488                      | 0.562                      |
+ MODEL					| Qwen2.5-Omni-7B | ultravox-v0_5-llama-3_1-8b | ultravox-v0_5-llama-3_2-1b | ultravox-v0_5-deepseek-r1-llama-3_1-8b | ultravox-v0_6-gemma-3-27b | ultravox-v0_6-qwen-3-32b |
+---------------------------------------------|-----------------|----------------------------|----------------------------|----------------------------------------|---------------------------|--------------------------|
+ params					| 7.62B           | 8.03B                      | 1.24B                      | 8.03B                                  | 27.01B                    | 32.8B                    |
+ quant					| Q6_K_H          | Q6_K_H                     | Q8_0_H                     | Q6_K                                   | Q4_K_H                    | Q4_K_H                   |
+ engine					| llama.cpp version: 5780 | llama.cpp version: 5780    | llama.cpp version: 5819    | llama.cpp version: 5869                | llama.cpp version: 5853   | llama.cpp version: 5853  |
+**TEST** |  **acc** |  **acc** |  **acc** |  **acc** |  **acc** |  **acc** | 
+ BBA_formal_fallacies                        | 0.472           | 0.512                      | 0.656                      | 0.768                                  | 0.640                     | 0.996                    |
+ BBA_navigate                                | 0.756           | 0.252                      | 0.216                      | 0.988                                  | 0.716                     | 0.976                    |
+ BBA_object_counting                         | 0.616           | 0.856                      | 0.576                      | 0.924                                  | 0.800                     | 0.984                    |
+ BBA_web_of_lies                             | 0.540           | 0.036                      | 0.260                      | 0.932                                  | 0.464                     | 0.784                    |
+ BBA                                         | 0.596           | 0.414                      | 0.427                      | 0.903                                  | 0.655                     | 0.935                    |
  DISCIPLINES
- NLP                                         | 0.498           | 0.478                      | 0.478                      |
- MATH                                        | 0.622           | 0.498                      | 0.646                      |
- SCIENCE                                     |  -              |  -                         |  -                         |
- ENGINEERING                                 |  -              |  -                         |  -                         |
- MEDICINE                                    |  -              |  -                         |  -                         |
- HUMANITIES                                  |  -              |  -                         |  -                         |
- BUSINESS                                    |  -              |  -                         |  -                         |
- LAW                                         |  -              |  -                         |  -                         |
- AUDIO                                       |  -              |  -                         |  -                         |
+ NLP                                         | 0.506           | 0.274                      | 0.458                      | 0.850                                  | 0.552                     | 0.890                    |
+ MATH                                        | 0.686           | 0.554                      | 0.396                      | 0.956                                  | 0.758                     | 0.980                    |
+ SCIENCE                                     |  -              |  -                         |  -                         |  -                                     |  -                        |  -                       |
+ ENGINEERING                                 |  -              |  -                         |  -                         |  -                                     |  -                        |  -                       |
+ MEDICINE                                    |  -              |  -                         |  -                         |  -                                     |  -                        |  -                       |
+ HUMANITIES                                  |  -              |  -                         |  -                         |  -                                     |  -                        |  -                       |
+ BUSINESS                                    |  -              |  -                         |  -                         |  -                                     |  -                        |  -                       |
+ LAW                                         |  -              |  -                         |  -                         |  -                                     |  -                        |  -                       |
+ AUDIO                                       |  -              |  -                         |  -                         |  -                                     |  -                        |  -                       |
  COMPOSITE AVERAGE
- AVG                                         | 0.560           | 0.488                      | 0.562                      |
+ AVG                                         | 0.596           | 0.414                      | 0.427                      | 0.903                                  | 0.655                     | 0.935                    |
