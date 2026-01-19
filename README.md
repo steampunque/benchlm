@@ -33,6 +33,7 @@ MODEL CATEGORIES:
    MATH    : math optimized models applied to Hendryks MATH500 set
    VISION  : image + text in, text out
    AUDIO   : audio + text in, text out
+   MT      : machine language translation
 
 METHODOLOGY:
    -The majority of the benchmarks use zero shot instruct prompts, as opposed to other benchmarks suites
@@ -66,6 +67,9 @@ METHODOLOGY:
       This is necessary to contain test time with new thinking models when can generate very lengthy responses.
       The result is printed in italics if there were more than 10 skipped questions in a test category.
       Note some very old runs had skips due to JSON errors in questions but these will not significantly impact averages.
+   -MT results are based on averaged sentence BLEU over the testsets using
+      languages de, es, fr, ru, ja, and zh to/from en.
+      unique tokenizers are used for ja, zh, and ru for bleu eval
 
 TESTS:
    KNOWLEDGE:
@@ -121,6 +125,9 @@ TESTS:
    AUDIO:
       BBA - Big Bench Audio
       BBHA - Big Bench Hard Audio subset with original text prompts
+   MT:
+      OPUS - Open Parallel Corpora
+      FLORES200 - Facebook Low Resource
 ```
 
 GENERAL MODELS:
@@ -720,3 +727,52 @@ AUDIO MODELS:
  AUDIO                                       |  -              |  -              |  -              |  -              |  -              |  -                         |  -                         |  -                                     |  -                                     |  -                        |  -                       |  -                   |  -                   |  -                     |
  COMPOSITE AVERAGE
  AVG                                         | 0.631           | 0.627           | 0.650           | 0.622           | 0.626           | 0.682                      | 0.721                      | 0.903                                  | 0.936                                  | 0.655                     | 0.935                    | 0.595                | 0.590                | 0.624                  |
+
+MT MODELS:
+
+ MODEL					| plamo-2-translate |
+---------------------------------------------|-------------------|
+ params					| 9.53B             |
+ quant					| Q6_K_H            |
+ engine					| llama.cpp version: 7762 |
+**TEST** |  **acc** | 
+ FLORES200_de_en                             | 35.5              |
+ FLORES200_en_de                             | 24.1              |
+ FLORES200_en_es                             | 21.3              |
+ FLORES200_en_fr                             | 36.5              |
+ FLORES200_en_ja                             | 28.2              |
+ FLORES200_en_ru                             | 18.2              |
+ FLORES200_en_zh                             | 33.6              |
+ FLORES200_es_en                             | 24.7              |
+ FLORES200_fr_en                             | 36.4              |
+ FLORES200_ja_en                             | 23.4              |
+ FLORES200_ru_en                             | 29.0              |
+ FLORES200_zh_en                             | 23.4              |
+ FLORES200                                   | 27.9              |
+ OPUS_de_en                                  | 21.3              |
+ OPUS_en_de                                  | 21.1              |
+ OPUS_en_es                                  | 27.9              |
+ OPUS_en_fr                                  | 26.7              |
+ OPUS_en_ja                                  | 11.9              |
+ OPUS_en_ru                                  | 19.7              |
+ OPUS_en_zh                                  | 26.7              |
+ OPUS_es_en                                  | 26.7              |
+ OPUS_fr_en                                  | 29.6              |
+ OPUS_ja_en                                  | 16.0              |
+ OPUS_ru_en                                  | 27.1              |
+ OPUS_zh_en                                  | 23.8              |
+ OPUS                                        | 23.2              |
+ DE_EN                                       | 26.0              |
+ EN_DE                                       | 22.1              |
+ ES_EN                                       | 26.0              |
+ EN_ES                                       | 25.6              |
+ FR_EN                                       | 31.9              |
+ EN_FR                                       | 30.0              |
+ RU_EN                                       | 27.7              |
+ EN_RU                                       | 19.1              |
+ JA_EN                                       | 18.4              |
+ EN_JA                                       | 17.3              |
+ ZH_EN                                       | 23.6              |
+ EN_ZH                                       | 29.0              |
+ COMPOSITE AVERAGE
+ AVG                                         | 24.7              |
