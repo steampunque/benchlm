@@ -730,49 +730,49 @@ AUDIO MODELS:
 
 MT MODELS:
 
- MODEL					| plamo-2-translate | madlad400-10b-mt |
----------------------------------------------|-------------------|------------------|
- params					| 9.53B             | 10.71B           |
- quant					| Q6_K_H            | Q6_K_H           |
- engine					| llama.cpp version: 7762 | llama.cpp version: 7772 |
-**TEST** |  **acc** |  **acc** | 
- FLORES200_de_en                             | 35.5              | 42.3             |
- FLORES200_en_de                             | 24.1              | 36.9             |
- FLORES200_en_es                             | 21.3              | 26.5             |
- FLORES200_en_fr                             | 36.5              | 49.8             |
- FLORES200_en_ja                             | 28.2              | 22.3             |
- FLORES200_en_ru                             | 18.2              | 28.8             |
- FLORES200_en_zh                             | 33.6              | 37.3             |
- FLORES200_es_en                             | 24.7              | 29.2             |
- FLORES200_fr_en                             | 36.4              | 44.3             |
- FLORES200_ja_en                             | 23.4              | 25.9             |
- FLORES200_ru_en                             | 29.0              | 34.9             |
- FLORES200_zh_en                             | 23.4              | 27.3             |
- FLORES200                                   | 27.9              | 33.7             |
- OPUS_de_en                                  | 21.3              | 27.1             |
- OPUS_en_de                                  | 21.1              | 30.7             |
- OPUS_en_es                                  | 27.9              | 37.1             |
- OPUS_en_fr                                  | 26.7              | 34.3             |
- OPUS_en_ja                                  | 11.9              | 15.9             |
- OPUS_en_ru                                  | 19.7              | 31.6             |
- OPUS_en_zh                                  | 26.7              | 41.3             |
- OPUS_es_en                                  | 26.7              | 40.3             |
- OPUS_fr_en                                  | 29.6              | 35.8             |
- OPUS_ja_en                                  | 16.0              | 18.8             |
- OPUS_ru_en                                  | 27.1              | 34.8             |
- OPUS_zh_en                                  | 23.8              | 38.8             |
- OPUS                                        | 23.2              | 32.2             |
- DE_EN                                       | 26.0              | 32.1             |
- EN_DE                                       | 22.1              | 32.7             |
- ES_EN                                       | 26.0              | 36.5             |
- EN_ES                                       | 25.6              | 33.5             |
- FR_EN                                       | 31.9              | 38.6             |
- EN_FR                                       | 30.0              | 39.5             |
- RU_EN                                       | 27.7              | 34.8             |
- EN_RU                                       | 19.1              | 30.6             |
- JA_EN                                       | 18.4              | 21.2             |
- EN_JA                                       | 17.3              | 18.0             |
- ZH_EN                                       | 23.6              | 34.9             |
- EN_ZH                                       | 29.0              | 39.9             |
+ MODEL					| madlad400-10b-mt | plamo-2-translate | translategemma-4b-it | translategemma-12b-it |
+---------------------------------------------|------------------|-------------------|----------------------|-----------------------|
+ params					| 10.71B           | 9.53B             | 3.88B                | 11.77B                |
+ quant					| Q6_K_H           | Q6_K_H            | Q6_K_H               | Q4_K_H                |
+ engine					| llama.cpp version: 7772 | llama.cpp version: 7762 | llama.cpp version: 7760 | llama.cpp version: 7779 |
+**TEST** |  **acc** |  **acc** |  **acc** |  **acc** | 
+ FLORES200_de_en                             | 42.3             | 35.5              | 37.8                 | 40.3                  |
+ FLORES200_en_de                             | 36.9             | 24.1              | 31.0                 | 34.5                  |
+ FLORES200_en_es                             | 26.5             | 21.3              | 25.1                 | 27.0                  |
+ FLORES200_en_fr                             | 49.8             | 36.5              | 40.9                 | 44.7                  |
+ FLORES200_en_ja                             | 22.3             | 28.2              | 27.7                 | 30.7                  |
+ FLORES200_en_ru                             | 28.8             | 18.2              | 25.4                 | 27.5                  |
+ FLORES200_en_zh                             | 37.3             | 33.6              | 36.6                 | 39.7                  |
+ FLORES200_es_en                             | 29.2             | 24.7              | 28.0                 | 28.7                  |
+ FLORES200_fr_en                             | 44.3             | 36.4              | 38.8                 | 41.2                  |
+ FLORES200_ja_en                             | 25.9             | 23.4              | 21.5                 | 24.1                  |
+ FLORES200_ru_en                             | 34.9             | 29.0              | 30.7                 | 33.0                  |
+ FLORES200_zh_en                             | 27.3             | 23.4              | 23.5                 | 25.7                  |
+ FLORES200                                   | 33.8             | 27.9              | 30.6                 | 33.1                  |
+ OPUS_de_en                                  | 27.1             | 21.3              | 28.2                 | 29.8                  |
+ OPUS_en_de                                  | 30.7             | 21.1              | 25.5                 | 26.5                  |
+ OPUS_en_es                                  | 37.1             | 27.9              | 31.1                 | 32.0                  |
+ OPUS_en_fr                                  | 34.3             | 26.7              | 27.0                 | 28.8                  |
+ OPUS_en_ja                                  | 15.9             | 11.9              | 9.8                  | 10.5                  |
+ OPUS_en_ru                                  | 31.6             | 19.7              | 23.1                 | 24.9                  |
+ OPUS_en_zh                                  | 41.3             | 26.7              | 26.4                 | 28.9                  |
+ OPUS_es_en                                  | 40.3             | 26.7              | 33.2                 | 35.0                  |
+ OPUS_fr_en                                  | 35.8             | 29.6              | 29.2                 | 30.9                  |
+ OPUS_ja_en                                  | 18.8             | 16.0              | 15.1                 | 17.0                  |
+ OPUS_ru_en                                  | 34.8             | 27.1              | 27.1                 | 29.0                  |
+ OPUS_zh_en                                  | 38.8             | 23.8              | 22.1                 | 25.5                  |
+ OPUS                                        | 32.2             | 23.2              | 24.8                 | 26.6                  |
+ DE_EN                                       | 32.1             | 26.0              | 31.4                 | 33.3                  |
+ EN_DE                                       | 32.7             | 22.1              | 27.3                 | 29.2                  |
+ ES_EN                                       | 36.5             | 26.0              | 31.4                 | 32.8                  |
+ EN_ES                                       | 33.5             | 25.6              | 29.0                 | 30.2                  |
+ FR_EN                                       | 38.6             | 31.9              | 32.4                 | 34.3                  |
+ EN_FR                                       | 39.5             | 30.0              | 31.6                 | 34.1                  |
+ RU_EN                                       | 34.8             | 27.7              | 28.2                 | 30.3                  |
+ EN_RU                                       | 30.6             | 19.1              | 23.8                 | 25.7                  |
+ JA_EN                                       | 21.2             | 18.4              | 17.2                 | 19.3                  |
+ EN_JA                                       | 18.0             | 17.3              | 15.8                 | 17.2                  |
+ ZH_EN                                       | 34.9             | 23.6              | 22.5                 | 25.5                  |
+ EN_ZH                                       | 39.9             | 29.0              | 29.8                 | 32.4                  |
  COMPOSITE AVERAGE
- AVG                                         | 24.7              | 32.7             |
+ AVG                                         | 32.7             | 24.7              | 26.7                 | 28.7                  |
